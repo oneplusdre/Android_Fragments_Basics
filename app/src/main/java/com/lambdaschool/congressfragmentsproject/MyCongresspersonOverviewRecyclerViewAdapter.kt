@@ -10,7 +10,6 @@ import android.widget.TextView
 import com.lambdaschool.congressfragmentsproject.CongresspersonOverviewFragment.OnListFragmentInteractionListener
 import com.lambdaschool.congressfragmentsproject.api.CongresspersonDetails
 import com.lambdaschool.congressfragmentsproject.api.CongresspersonOverview
-import com.lambdaschool.congressfragmentsproject.dummy.DummyContent.DummyItem
 
 import kotlinx.android.synthetic.main.fragment_congresspersonoverview.view.*
 
@@ -43,8 +42,8 @@ class MyCongresspersonOverviewRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.mIdView.text = item.id
-        holder.mContentView.text = item.content
+        holder.mIdView.text = CongresspersonDetails().memberId
+        holder.mContentView.text = CongresspersonDetails().memberId
 
         with(holder.mView) {
             tag = item
